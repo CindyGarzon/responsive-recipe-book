@@ -1,61 +1,127 @@
-
-html {
-  background-color: #fff;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'PT Serif', serif;
-
-.navbar {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  height: 100px;
-  display: block;
+html, .recipe-tag {
+  font-family: kepler-std, serif;
+  font-family: houschka-rounded, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.banner {
-  display: block;
+.tag {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-
-nav a {
-  text-align: right;
-  color: #005e76;
-  border-bottom: #8bc9d9 2px solid;
-  text-decoration: none;
+.bold {
+  font-family: acumin-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-nav a:hover {
+.hover-box {
   color: #000;
 }
 
-.recipes {
-  margin-left: 25px;
-  margin-right: 25px;
+.hover-box-caption {
+  bottom: -10em;
+  background-color: rgba(255, 255, 255, .8);
+  transition: all .25s linear;
 }
 
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 82em;
-  width: 100%;
+.hover-box:hover .hover-box-caption,
+.hover-box:focus .hover-box-caption {
+  bottom: 0;
 }
 
-.card {
-  max-width: 24em;
-  border: 3px solid #000;
+.hover-box-img {
+  filter: grayscale(100%);
+  transition: all .2s linear;
 }
 
-/* @media only screen and (min-width: 25em) {
-  #main {
-    margin-top: 100px;
+.hover-box:hover .hover-box-img,
+.hover-box-focus .hover-box-img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.hover-box:focus {
+  z-index: 10;
+}
+
+header a, footer a {
+  text-decoration: none;
+  border-bottom: .15em solid currentColor;
+  color: #000;
+  text-decoration: none;
+}
+
+header a:hover, footer a:hover {
+  border-bottom: 1px solid #000;
+  transition: all .6s linear;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  background-size: 2px 5px, 2px 5px, 18px auto;
+  background-repeat: repeat-x, repeat-x, repeat;
+  background-position: left top, left bottom, left top;
+}
+
+.search-input {
+  background-image: url("../images/spy-glass.svg");
+  background-repeat: no-repeat;
+  background-position: .2em center;
+  background-size: 1.2em auto;
+  padding-left: 1.5em;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .unit-offset-s-1-4 {
+    margin-left: 25%;
   }
-} */
+
+}
+
 @media only screen and (min-width: 38em) {
 
-  h1 {
-    float: left;
+  header nav ul li {
+    display: inline-block;
+    text-align: right;
+  }
+
+  header nav ul {
+    text-align: right;
+  }
+
+  .right-nav {
+    text-align: right;
+  }
+
+  .unit-offset-s-1-4 {
+    margin-left: 0;
+  }
+
+  .logo-size {
+    max-width: 12em;
+  }
+
+  .recipe-tag {
+    max-width: 50%;
+    transform: translateX(100%);
+  }
+
+@media only screen and (min-width: 73em) {
+
+  .extra-gutter {
+    margin: 0 5em;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .extra-gutter {
+    margin: 0 10em;
   }
 
 }
